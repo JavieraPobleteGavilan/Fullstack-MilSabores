@@ -21,7 +21,7 @@ function render() {
   if (!r.lineas.length) {
     contItems.innerHTML = `
       <div class="vacio">
-        <p style="font-size:3rem;margin:0">🧁</p>
+        <p style="font-size:3rem;margin:0"></p>
         <h2>Tu carrito está vacío</h2>
         <p>Descubre nuestras tortas y postres.</p>
         <a class="btn" href="productos.html">Ver productos</a>
@@ -52,7 +52,7 @@ function render() {
   contResumen.innerHTML = `
     <dl>
       <dt>Productos (${Carrito.cantidadTotal()})</dt><dd>${formatoCLP(r.subtotal)}</dd>
-      ${r.descuentoTorta ? `<dt class="descuento">Torta de cumpleaños gratis 🎂<br><small>${escapar(r.tortaGratisNombre)}</small></dt><dd class="descuento">−${formatoCLP(r.descuentoTorta)}</dd>` : ""}
+      ${r.descuentoTorta ? `<dt class="descuento">Torta de cumpleaños gratis <br><small>${escapar(r.tortaGratisNombre)}</small></dt><dd class="descuento">−${formatoCLP(r.descuentoTorta)}</dd>` : ""}
       ${r.descuentoPct ? `<dt class="descuento">${escapar(r.motivo)}</dt><dd class="descuento">−${formatoCLP(r.descuentoPct)}</dd>` : ""}
       <dt class="total">Total</dt><dd class="total">${formatoCLP(r.total)}</dd>
     </dl>`;
@@ -60,7 +60,7 @@ function render() {
   if (!r.usuario) {
     notaSesion.innerHTML = `<a href="login.html">Inicia sesión</a> o <a href="registro.html">regístrate</a> para aplicar tus descuentos automáticamente.`;
   } else if (r.beneficios.tortaGratis && !r.descuentoTorta) {
-    notaSesion.textContent = "🎉 ¡Feliz cumpleaños! Agrega una torta y te la regalamos.";
+    notaSesion.textContent = "¡Feliz cumpleaños! Agrega una torta y te la regalamos.";
   } else {
     notaSesion.textContent = r.motivo ? `Beneficio activo: ${r.motivo}.` : "";
   }
