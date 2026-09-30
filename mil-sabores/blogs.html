@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noticias, recetas y datos curiosos de Pastelería Mil Sabores.">
+  <title>Blogs | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="img/logo.svg" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html" aria-current="page">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <div class="contenedor">
+      <header class="seccion-titulo" style="margin-top:32px">
+        <h1>Noticias importantes</h1>
+        <p>Historias, recetas y consejos de nuestros pasteleros y de los estudiantes de gastronomía de Duoc.</p>
+      </header>
+      <div class="blog-lista">
+        <article class="blog-tarjeta">
+          <div>
+            <p class="fecha"><time datetime="2026-08-12">12 de agosto de 2026</time> · Dato curioso</p>
+            <h2>Caso curioso #1: la torta más grande del mundo</h2>
+            <p>En 1995 nuestros pasteleros se unieron a cientos de voluntarios para romper un récord Guinness. Te contamos cómo se organizó y cuántos huevos hicieron falta.</p>
+            <a class="btn" href="blog-detalle-1.html">Ver caso</a>
+          </div>
+          <img src="img/blog/guinness.svg" alt="Torta gigante de tres pisos con el año 1995" width="400" height="300">
+        </article>
+        <article class="blog-tarjeta">
+          <div>
+            <p class="fecha"><time datetime="2026-09-03">3 de septiembre de 2026</time> · Receta</p>
+            <h2>Caso curioso #2: el secreto de la torta de manjar</h2>
+            <p>Estudiantes de gastronomía de Duoc comparten sus consejos para lograr un manjar perfecto y una torta de manjar nuez digna de Fiestas Patrias.</p>
+            <a class="btn" href="blog-detalle-2.html">Ver caso</a>
+          </div>
+          <img src="img/blog/manjar.svg" alt="Torta de manjar junto a un frasco de manjar" width="400" height="300">
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>

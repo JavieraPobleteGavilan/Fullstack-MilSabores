@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pastelería Mil Sabores: tortas y repostería chilena con 50 años de historia.">
+  <title>Inicio | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenedor">
+        <div>
+          <span class="etiqueta">🎂 50 aniversario · 1976 – 2026</span>
+          <h1 id="titulo-hero">Tienda online Mil Sabores</h1>
+          <p>Tortas y productos de repostería de alta calidad para todas las ocasiones. Celebramos nuestras raíces con recetas tradicionales y la creatividad de los nuevos talentos de la gastronomía chilena.</p>
+          <div class="acciones">
+            <a class="btn" href="productos.html">Ver productos</a>
+            <a class="btn btn-borde" href="registro.html">Regístrate y obtén descuentos</a>
+          </div>
+        </div>
+        <img src="img/hero.svg" alt="Torta de cumpleaños rosada con una vela" width="400" height="300">
+      </div>
+    </section>
+
+    <section class="seccion franja" aria-labelledby="titulo-beneficios">
+      <div class="contenedor">
+        <header class="seccion-titulo">
+          <h2 id="titulo-beneficios">Beneficios por nuestros 50 años</h2>
+          <p>Regístrate y los descuentos se aplican solos en tu carrito.</p>
+        </header>
+        <div class="hitos">
+          <article class="hito"><strong>50%</strong>de descuento en todos los productos para clientes de 50 años o más.</article>
+          <article class="hito"><strong>10%</strong>de por vida al registrarte con el código <b>FELICES50</b>.</article>
+          <article class="hito"><strong>Gratis</strong>una torta en tu cumpleaños si eres estudiante Duoc y te registras con tu correo @duoc.cl.</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-destacados">
+      <div class="contenedor">
+        <header class="seccion-titulo">
+          <h2 id="titulo-destacados">Nuestros productos</h2>
+          <p>Una selección de nuestras tortas y postres más pedidos.</p>
+        </header>
+        <div class="grilla-productos" id="lista-destacados" aria-live="polite"></div>
+        <p style="text-align:center;margin-top:24px"><a class="btn btn-rosa" href="productos.html">Ver todo el catálogo</a></p>
+      </div>
+    </section>
+
+    <section class="seccion franja" aria-labelledby="titulo-impacto">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2 id="titulo-impacto">Impacto comunitario</h2>
+          <p>Parte de cada compra financia becas y prácticas para estudiantes de gastronomía de Duoc UC, que además comparten sus recetas y consejos en nuestro blog.</p>
+          <ul>
+            <li>Talleres gratuitos de repostería para la comunidad local.</li>
+            <li>Prácticas profesionales en nuestra cocina.</li>
+            <li>Recetas tradicionales preservadas y compartidas.</li>
+          </ul>
+          <a class="btn btn-borde" href="nosotros.html">Conoce nuestra historia</a>
+        </div>
+        <img src="img/nosotros.svg" alt="Ilustración del equipo de pasteleros" width="400" height="300" style="border-radius:20px">
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/tienda.js"></script>
+</body>
+</html>

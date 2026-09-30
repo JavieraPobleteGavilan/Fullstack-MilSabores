@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historia, misión y equipo de Pastelería Mil Sabores.">
+  <title>Nosotros | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="img/logo.svg" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html" aria-current="page">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <section class="seccion" aria-labelledby="titulo-nosotros">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h1 id="titulo-nosotros">Nuestra historia</h1>
+          <p>Pastelería Mil Sabores nació en 1976 como un pequeño local de barrio en Santiago. Cincuenta años después somos un referente de la repostería chilena, con recetas que pasan de generación en generación.</p>
+          <p>En 1995 fuimos parte del equipo que creó la torta más grande del mundo, un récord Guinness que todavía nos llena de orgullo. Hoy renovamos nuestra tienda online para que disfrutes esa misma tradición desde tu casa.</p>
+        </div>
+        <img src="img/blog/guinness.svg" alt="Ilustración de una torta gigante de varios pisos" width="400" height="300" style="border-radius:20px">
+      </div>
+    </section>
+
+    <section class="seccion franja" aria-label="Misión y visión">
+      <div class="contenedor dos-columnas">
+        <article class="tarjeta-simple">
+          <h2>Misión</h2>
+          <p>Ofrecer una experiencia dulce y memorable a nuestros clientes, proporcionando tortas y productos de repostería de alta calidad para todas las ocasiones, mientras celebramos nuestras raíces históricas y fomentamos la creatividad en la repostería.</p>
+        </article>
+        <article class="tarjeta-simple">
+          <h2>Visión</h2>
+          <p>Convertirnos en la tienda online líder de productos de repostería en Chile, conocida por nuestra innovación, calidad y el impacto positivo en la comunidad, especialmente en la formación de nuevos talentos en gastronomía.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-equipo">
+      <div class="contenedor">
+        <header class="seccion-titulo">
+          <h2 id="titulo-equipo">Equipo de desarrollo</h2>
+          <p>Estudiantes de Desarrollo Fullstack II (DSY1104) de Duoc UC.</p>
+        </header>
+        <div class="tarjetas-3">
+          <article class="tarjeta-simple"><div class="avatar" aria-hidden="true">I1</div><h3>Integrante 1</h3><p>Tienda: home, catálogo, detalle de producto y carrito.</p></article>
+          <article class="tarjeta-simple"><div class="avatar" aria-hidden="true">I2</div><h3>Integrante 2</h3><p>Formularios: registro, inicio de sesión, contacto y validaciones JavaScript.</p></article>
+          <article class="tarjeta-simple"><div class="avatar" aria-hidden="true">I3</div><h3>Integrante 3</h3><p>Panel administrador: mantenedores de productos, usuarios y órdenes.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>

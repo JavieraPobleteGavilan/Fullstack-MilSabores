@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../" data-roles="Administrador">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Usuario | Administrador Mil Sabores</title>
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="admin">
+    <aside class="admin-menu" id="admin-menu" aria-label="Menú del administrador">
+      <a class="logo" href="index.html">
+        <img src="../img/logo.svg" alt="" width="42" height="42">
+        <span>Mil Sabores<small>ADMINISTRADOR</small></span>
+      </a>
+      <nav aria-label="Secciones del panel">
+        <ul><li data-roles="Administrador,Vendedor"><a href="index.html"><span class="icono" aria-hidden="true">📊</span>Dashboard</a></li><li data-roles="Administrador,Vendedor"><a href="ordenes.html"><span class="icono" aria-hidden="true">🧾</span>Órdenes</a></li><li data-roles="Administrador,Vendedor"><a href="productos.html"><span class="icono" aria-hidden="true">🎂</span>Productos</a></li><li data-roles="Administrador"><a href="usuarios.html" aria-current="page"><span class="icono" aria-hidden="true">👥</span>Usuarios</a></li></ul>
+      </nav>
+      <div class="abajo">
+        <ul>
+          <li><a href="../index.html"><span class="icono" aria-hidden="true">🏪</span>Ver tienda</a></li>
+          <li><button type="button" class="link-menu" id="admin-salir"><span class="icono" aria-hidden="true">🚪</span>Cerrar sesión</button></li>
+        </ul>
+        <p class="perfil-admin" id="perfil-admin"></p>
+      </div>
+    </aside>
+    <main class="admin-contenido" id="contenido">
+      <header class="admin-cabecera">
+        <button class="btn btn-borde btn-chico admin-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">☰ Menú</button>
+        <h1 id="titulo-form">Nuevo usuario</h1>
+        <a class="btn btn-borde" href="usuarios.html">← Volver</a>
+      </header>
+      <section class="tarjeta-form">
+        <form id="form-usuario" data-modo="admin" novalidate>
+          <p class="resumen-errores" hidden></p>
+          <div class="form-grid">
+            <div class="campo">
+              <label for="run">RUN *</label>
+              <input type="text" id="run" maxlength="9" placeholder="Ej: 190110222" autocomplete="off">
+              <small class="ayuda">Sin puntos ni guion.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="tipo">Tipo de usuario *</label>
+              <select id="tipo"><option value="">-- Seleccione el tipo --</option><option>Administrador</option><option>Vendedor</option><option>Cliente</option></select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" autocomplete="off">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="apellidos">Apellidos *</label>
+              <input type="text" id="apellidos" autocomplete="off">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo *</label>
+              <input type="email" id="correo" list="dominios" autocomplete="off">
+              <datalist id="dominios"></datalist>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="fechaNacimiento">Fecha de nacimiento <span class="opcional">(opcional)</span></label>
+              <input type="date" id="fechaNacimiento">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="password">Contraseña <span id="pass-nota" class="opcional">*</span></label>
+              <input type="password" id="password" maxlength="10" autocomplete="new-password">
+              <small class="ayuda">Entre 4 y 10 caracteres. Al editar, déjala vacía para no cambiarla.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="password2">Confirmar contraseña</label>
+              <input type="password" id="password2" maxlength="10" autocomplete="new-password">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono <span class="opcional">(opcional)</span></label>
+              <input type="tel" id="telefono">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="codigoPromo">Código promocional <span class="opcional">(opcional)</span></label>
+              <input type="text" id="codigoPromo">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="region">Región *</label>
+              <select id="region"><option value="">-- Seleccione la región --</option></select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="comuna">Comuna *</label>
+              <select id="comuna" disabled><option value="">-- Seleccione la comuna --</option></select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo completo">
+              <label for="direccion">Dirección *</label>
+              <input type="text" id="direccion">
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </div>
+          <div class="sugerencia" id="beneficios-vivo" aria-live="polite"></div>
+          <button class="btn btn-bloque" type="submit">Guardar usuario</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+  <script src="../js/usuario-form.js"></script>
+</body>
+</html>

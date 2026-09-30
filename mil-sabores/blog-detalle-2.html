@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consejos de estudiantes de gastronomía Duoc para la torta de manjar.">
+  <title>El secreto de la torta de manjar | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="img/logo.svg" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html" aria-current="page">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <article class="articulo">
+      <nav class="migas" aria-label="Ruta de navegación" style="margin-top:0">
+        <ol><li><a href="index.html">Home</a></li><li><a href="blogs.html">Blogs</a></li><li aria-current="page">Caso curioso #2</li></ol>
+      </nav>
+      <header>
+        <p class="texto-secundario"><time datetime="2026-09-03">3 de septiembre de 2026</time> · Receta</p>
+        <h1>El secreto de la torta de manjar</h1>
+      </header>
+      <img src="img/blog/manjar.svg" alt="Torta de manjar junto a un frasco de manjar" width="400" height="300">
+      <p>La torta de manjar nuez es una de las favoritas en Chile, sobre todo en septiembre. Le pedimos a estudiantes de gastronomía de Duoc UC que nos compartieran sus mejores consejos.</p>
+      <h2>Consejos de los estudiantes</h2>
+      <ol>
+        <li><strong>Bizcocho aireado:</strong> bate las claras a punto de nieve y únelas con movimientos envolventes.</li>
+        <li><strong>Remojo justo:</strong> humedece el bizcocho con almíbar tibio, sin empaparlo.</li>
+        <li><strong>Manjar a temperatura ambiente:</strong> así se esparce sin romper las capas.</li>
+        <li><strong>Nueces tostadas:</strong> unos minutos en sartén realzan su sabor.</li>
+      </ol>
+      <h2>Mira cómo se prepara</h2>
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/9saCoPwW-5k" title="Video: preparación de torta manjar nuez" loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p>¿No tienes tiempo de prepararla? Nuestra <a href="detalle.html?codigo=TT002">Torta Circular de Manjar</a> sigue la receta tradicional de la casa.</p>
+      <p><a class="btn btn-borde" href="blogs.html">← Volver a blogs</a></p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>

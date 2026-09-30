@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revisa tu carrito, aplica descuentos y confirma tu pedido.">
+  <title>Carrito de compras | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="img/logo.svg" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <div class="contenedor">
+      <h1 style="margin-top:32px">Mi carrito de compras</h1>
+      <div class="carrito">
+        <section class="carrito-lista" aria-labelledby="titulo-items">
+          <h2 id="titulo-items" class="oculto-visual">Productos en el carrito</h2>
+          <div id="items-carrito" aria-live="polite"></div>
+        </section>
+        <aside class="resumen" aria-labelledby="titulo-resumen">
+          <h2 id="titulo-resumen" style="font-size:1.5rem">Resumen</h2>
+          <div id="resumen-carrito"></div>
+          <form id="form-cupon" novalidate>
+            <div class="campo">
+              <label for="cupon">Cupón de descuento</label>
+              <div class="cupon">
+                <input type="text" id="cupon" placeholder="Ej: FELICES50" autocomplete="off">
+                <button class="btn btn-borde btn-chico" type="submit">Aplicar</button>
+              </div>
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </form>
+          <form id="form-pago" novalidate>
+            <div class="campo">
+              <label for="fecha-entrega">Fecha de entrega preferida</label>
+              <input type="date" id="fecha-entrega" required>
+              <small class="ayuda">Entregas desde 2 días hábiles, de lunes a sábado.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <button class="btn btn-pagar btn-bloque" type="submit" id="btn-pagar">Pagar</button>
+          </form>
+          <p class="texto-secundario" style="font-size:.85rem;margin-top:10px" id="nota-sesion"></p>
+        </aside>
+      </div>
+    </div>
+
+    <dialog id="dialogo-boleta" aria-labelledby="titulo-boleta">
+      <div class="boleta" id="contenido-boleta"></div>
+    </dialog>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

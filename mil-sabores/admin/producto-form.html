@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../" data-roles="Administrador">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Producto | Administrador Mil Sabores</title>
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="admin">
+    <aside class="admin-menu" id="admin-menu" aria-label="Menú del administrador">
+      <a class="logo" href="index.html">
+        <img src="../img/logo.svg" alt="" width="42" height="42">
+        <span>Mil Sabores<small>ADMINISTRADOR</small></span>
+      </a>
+      <nav aria-label="Secciones del panel">
+        <ul><li data-roles="Administrador,Vendedor"><a href="index.html"><span class="icono" aria-hidden="true">📊</span>Dashboard</a></li><li data-roles="Administrador,Vendedor"><a href="ordenes.html"><span class="icono" aria-hidden="true">🧾</span>Órdenes</a></li><li data-roles="Administrador,Vendedor"><a href="productos.html" aria-current="page"><span class="icono" aria-hidden="true">🎂</span>Productos</a></li><li data-roles="Administrador"><a href="usuarios.html"><span class="icono" aria-hidden="true">👥</span>Usuarios</a></li></ul>
+      </nav>
+      <div class="abajo">
+        <ul>
+          <li><a href="../index.html"><span class="icono" aria-hidden="true">🏪</span>Ver tienda</a></li>
+          <li><button type="button" class="link-menu" id="admin-salir"><span class="icono" aria-hidden="true">🚪</span>Cerrar sesión</button></li>
+        </ul>
+        <p class="perfil-admin" id="perfil-admin"></p>
+      </div>
+    </aside>
+    <main class="admin-contenido" id="contenido">
+      <header class="admin-cabecera">
+        <button class="btn btn-borde btn-chico admin-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">☰ Menú</button>
+        <h1 id="titulo-form">Nuevo producto</h1>
+        <a class="btn btn-borde" href="productos.html">← Volver</a>
+      </header>
+      <section class="tarjeta-form">
+        <form id="form-producto" novalidate>
+          <p class="resumen-errores" hidden></p>
+          <div class="form-grid">
+            <div class="campo">
+              <label for="codigo">Código producto *</label>
+              <input type="text" id="codigo" placeholder="Ej: TC003" autocomplete="off">
+              <small class="ayuda">Mínimo 3 caracteres.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="categoria">Categoría *</label>
+              <select id="categoria"><option value="">-- Seleccione la categoría --</option></select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo completo">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" autocomplete="off">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo completo">
+              <label for="descripcion">Descripción <span class="opcional">(opcional)</span></label>
+              <textarea id="descripcion" rows="4"></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="precio">Precio (CLP) *</label>
+              <input type="number" id="precio" min="0" step="any" placeholder="Ej: 45000">
+              <small class="ayuda">0 = producto gratis (FREE). Acepta decimales.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="stock">Stock *</label>
+              <input type="number" id="stock" min="0" step="1" placeholder="Ej: 10">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="stockCritico">Stock crítico <span class="opcional">(opcional)</span></label>
+              <input type="number" id="stockCritico" min="0" step="1" placeholder="Ej: 3">
+              <small class="ayuda">Se mostrará una alerta cuando el stock sea igual o menor.</small>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="imagen">Imagen <span class="opcional">(opcional)</span></label>
+              <input type="file" id="imagen" accept="image/*">
+              <small class="ayuda">JPG, PNG o SVG de hasta 1 MB.</small>
+              <small class="error" aria-live="polite"></small>
+              <img id="vista-previa" class="vista-previa" alt="Vista previa de la imagen" hidden>
+            </div>
+            <div class="campo campo-check completo">
+              <input type="checkbox" id="personalizable">
+              <label for="personalizable">Permite mensaje personalizado y selección de tamaño</label>
+            </div>
+          </div>
+          <div class="sugerencia" id="aviso-stock" aria-live="polite"></div>
+          <button class="btn btn-bloque" type="submit">Guardar producto</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crea tu cuenta en Pastelería Mil Sabores.">
+  <title>Registro de usuario | Pastelería Mil Sabores</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Pastelería Mil Sabores, ir al inicio">
+        <img src="img/logo.svg" alt="Logo Pastelería Mil Sabores" width="48" height="48">
+        <span>Mil Sabores<small>PASTELERÍA · DESDE 1976</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul><li><a href="index.html">Home</a></li><li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="carrito-link" href="carrito.html" aria-label="Ver carrito de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 2h2.3l3.4 11.2a2 2 0 0 0 1.9 1.4h7.9a2 2 0 0 0 1.9-1.5L23 6H6.2l-.9-3A1.5 1.5 0 0 0 3.9 2z"/></svg> Carrito <span class="contador-carrito" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+  <div class="barra-sesion">
+    <div class="contenedor" id="zona-sesion"><a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a></div>
+  </div>
+
+  <main id="contenido">
+    <section class="tarjeta-form" aria-labelledby="titulo-registro">
+      <header class="marca">
+        <img src="img/logo.svg" alt="" width="80" height="80">
+        <h1 id="titulo-registro">Registro de usuario</h1>
+        <p class="texto-secundario">Los campos con * son obligatorios.</p>
+      </header>
+      <form id="form-usuario" novalidate>
+        <p class="resumen-errores" hidden></p>
+        <div class="form-grid">
+          <div class="campo">
+            <label for="run">RUN *</label>
+            <input type="text" id="run" maxlength="9" placeholder="Ej: 190110222" autocomplete="off" inputmode="text">
+            <small class="ayuda">Sin puntos ni guion.</small>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="fechaNacimiento">Fecha de nacimiento <span class="opcional">(opcional)</span></label>
+            <input type="date" id="fechaNacimiento" autocomplete="bday">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" maxlength="60" autocomplete="given-name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="apellidos">Apellidos *</label>
+            <input type="text" id="apellidos" maxlength="110" autocomplete="family-name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo completo">
+            <label for="correo">Correo *</label>
+            <input type="email" id="correo" list="dominios" placeholder="nombre@duoc.cl" autocomplete="email">
+            <datalist id="dominios"></datalist>
+            <small class="ayuda">Solo @duoc.cl, @profesor.duoc.cl o @gmail.com.</small>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo completo">
+            <label for="correo2">Confirmar correo *</label>
+            <input type="email" id="correo2" autocomplete="off">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="password">Contraseña *</label>
+            <input type="password" id="password" maxlength="10" autocomplete="new-password">
+            <small class="ayuda">Entre 4 y 10 caracteres.</small>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="password2">Confirmar contraseña *</label>
+            <input type="password" id="password2" maxlength="10" autocomplete="new-password">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono <span class="opcional">(opcional)</span></label>
+            <input type="tel" id="telefono" placeholder="+56 9 1234 5678" autocomplete="tel">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="codigoPromo">Código promocional <span class="opcional">(opcional)</span></label>
+            <input type="text" id="codigoPromo" placeholder="FELICES50" autocomplete="off">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="region">Región *</label>
+            <select id="region" autocomplete="address-level1"><option value="">-- Seleccione la región --</option></select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="comuna">Comuna *</label>
+            <select id="comuna" autocomplete="address-level2" disabled><option value="">-- Seleccione la comuna --</option></select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo completo">
+            <label for="direccion">Dirección *</label>
+            <input type="text" id="direccion" placeholder="Calle, número, depto." autocomplete="street-address">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo campo-check completo">
+            <input type="checkbox" id="terminos">
+            <label for="terminos">Acepto los términos y condiciones de la tienda *</label>
+          </div>
+          <div class="campo completo" style="margin-top:-12px"><small class="error" id="error-terminos" aria-live="polite"></small></div>
+        </div>
+        <div class="sugerencia" id="beneficios-vivo" aria-live="polite"></div>
+        <button class="btn btn-bloque" type="submit">Registrar</button>
+        <p class="form-pie">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <section>
+        <h2>Mil Sabores</h2>
+        <p>50 años endulzando Chile. Parte del récord Guinness de la torta más grande del mundo (1995).</p>
+        <div class="pagos" aria-label="Medios de pago aceptados"><span>VISA</span><span>MASTERCARD</span><span>REDCOMPRA</span></div>
+      </section>
+      <nav aria-label="Categorías destacadas">
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="productos.html?categoria=Tortas%20Cuadradas">Tortas cuadradas</a></li>
+          <li><a href="productos.html?categoria=Tortas%20Circulares">Tortas circulares</a></li>
+          <li><a href="productos.html?categoria=Productos%20Sin%20Az%C3%BAcar">Sin azúcar</a></li>
+          <li><a href="productos.html?categoria=Productos%20Vegana">Veganos</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          Av. Providencia 1976, Santiago<br>
+          <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+          <a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a>
+        </address>
+        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </section>
+      <section>
+        <h2>Newsletter</h2>
+        <p>Recibe promociones y recetas de los estudiantes de gastronomía Duoc.</p>
+        <form id="form-newsletter" novalidate>
+          <label for="news-correo" class="oculto-visual">Correo electrónico</label>
+          <input type="email" id="news-correo" placeholder="tu@gmail.com" autocomplete="email">
+          <button class="btn btn-rosa btn-chico" type="submit">Suscribir</button>
+        </form>
+        <small class="error" aria-live="polite"></small>
+      </section>
+    </div>
+    <p class="legal">© 2026 Pastelería Mil Sabores · Proyecto académico DSY1104 Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/usuario-form.js"></script>
+</body>
+</html>

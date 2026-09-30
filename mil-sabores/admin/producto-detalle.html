@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../" data-roles="Administrador,Vendedor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Detalle producto | Administrador Mil Sabores</title>
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="admin">
+    <aside class="admin-menu" id="admin-menu" aria-label="Menú del administrador">
+      <a class="logo" href="index.html">
+        <img src="../img/logo.svg" alt="" width="42" height="42">
+        <span>Mil Sabores<small>ADMINISTRADOR</small></span>
+      </a>
+      <nav aria-label="Secciones del panel">
+        <ul><li data-roles="Administrador,Vendedor"><a href="index.html"><span class="icono" aria-hidden="true">📊</span>Dashboard</a></li><li data-roles="Administrador,Vendedor"><a href="ordenes.html"><span class="icono" aria-hidden="true">🧾</span>Órdenes</a></li><li data-roles="Administrador,Vendedor"><a href="productos.html" aria-current="page"><span class="icono" aria-hidden="true">🎂</span>Productos</a></li><li data-roles="Administrador"><a href="usuarios.html"><span class="icono" aria-hidden="true">👥</span>Usuarios</a></li></ul>
+      </nav>
+      <div class="abajo">
+        <ul>
+          <li><a href="../index.html"><span class="icono" aria-hidden="true">🏪</span>Ver tienda</a></li>
+          <li><button type="button" class="link-menu" id="admin-salir"><span class="icono" aria-hidden="true">🚪</span>Cerrar sesión</button></li>
+        </ul>
+        <p class="perfil-admin" id="perfil-admin"></p>
+      </div>
+    </aside>
+    <main class="admin-contenido" id="contenido">
+      <header class="admin-cabecera">
+        <button class="btn btn-borde btn-chico admin-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">☰ Menú</button>
+        <h1>Detalle del producto</h1>
+        <a class="btn btn-borde" href="productos.html">← Volver</a>
+      </header>
+      <article class="panel" id="ficha-producto"></article>
+
+    </main>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
